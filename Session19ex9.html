@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let result1 = "javascript" + 5;
+console.log("result1: " + result1);  // "javascript5"
+//Trong JavaScript, khi dùng toán tử + giữa chuỗi và một số, JavaScript sẽ thực hiện phép nối chuỗi chứ không phải phép cộng số. Do đó, "javascript" và 5 sẽ được nối lại thành chuỗi "javascript5".
+
+
+let result2 = "javascript" - 1;
+console.log("result2: " + result2);  // NaN
+// Khi dùng toán tử - giữa một chuỗi không phải số và một số, JavaScript sẽ cố gắng chuyển chuỗi "javascript" thành một số để thực hiện phép trừ. Tuy nhiên, "javascript" không thể chuyển thành một số hợp lệ, do đó kết quả là NaN (Not-a-Number).
+
+
+let result3 = "3" + 2;
+console.log("result3: " + result3);  // "32"
+// Khi dùng toán tử + giữa một chuỗi và một số, JavaScript thực hiện phép nối chuỗi. Mặc dù "3" là chuỗi và 2 là số, nhưng JavaScript sẽ chuyển số 2 thành chuỗi và nối chúng lại thành "32".
+
+
+let result4 = "5" - 4;
+console.log("result4: " + result4);  // 1
+//Khi dùng toán tử - giữa chuỗi và số, JavaScript sẽ cố gắng chuyển chuỗi "5" thành số và thực hiện phép trừ. Chuỗi "5" có thể chuyển thành số 5, và phép trừ 5 - 4 sẽ cho kết quả là 1.
+
+
+let result5 = isNaN("123");
+console.log("result5: " + result5);  // false
+// Hàm isNaN() kiểm tra xem giá trị có phải là NaN hay không. Tuy nhiên, "123" có thể được chuyển thành số hợp lệ, do đó isNaN("123") trả về false, nghĩa là "123" không phải là NaN.
+
+let result6 = isNaN("hello");
+console.log("result6: " + result6);  // true
+//"hello" không thể chuyển thành một số hợp lệ, vì vậy isNaN("hello") trả về true, nghĩa là "hello" là NaN khi JavaScript cố gắng ép kiểu.
+
+
+let result7 = Number.isNaN("123");
+console.log("result7: " + result7);  // false
+//Hàm Number.isNaN() kiểm tra xem giá trị có thực sự là NaN không mà không thực hiện chuyển đổi kiểu. Mặc dù "123" có thể chuyển thành số 123, nhưng vì "123" không phải là NaN, nên Number.isNaN("123") trả về false.
+
+
+let result8 = Number.isNaN(NaN);
+console.log("result8: " + result8);  // true
+//Number.isNaN() trả về true khi giá trị thực sự là NaN. Vì NaN là giá trị đặc biệt của JavaScript, nên Number.isNaN(NaN) trả về true.
+
+</script>
+
+</body>
+</html>
